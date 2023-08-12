@@ -1,5 +1,4 @@
 import * as React from "react";
-import clsx from "clsx";
 import * as colors from "material-ui-colors";
 import { styled, createTheme, ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
