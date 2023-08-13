@@ -64,11 +64,12 @@ const AppBar = styled(MuiAppBar, {
 const Copyright = () => {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {"Copyright © "}
-      <Link color="inherit" to="/">
-        管理画面
-      </Link> {new Date().getFullYear()}
-      {"."}
+      {'Copyright © '}
+      <Link color="inherit" to="https://nekoharuyuki.github.io/Privacy.Policy.io/">
+        Neko Haruyuki
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
     </Typography>
   );
 };
@@ -192,7 +193,7 @@ const GenericTemplate: React.FC<GenericTemplateProps> = ({
           </Toolbar>
           <Divider />
           <List component="nav">
-            <Link to="/">
+            <Link to="/Home">
               <ListItem>
                 <ListItemIcon>
                   <HomeIcon />
