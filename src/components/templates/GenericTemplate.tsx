@@ -17,6 +17,8 @@ import IconButton from "@mui/material/IconButton";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import { mainListItems, secondaryListItems, tertiaryListItems } from './listItems';
+import Badge from '@mui/material/Badge';
+import NotificationsIcon from '@mui/icons-material/Notifications';
 
 const drawerWidth = 240;
 
@@ -173,6 +175,11 @@ const GenericTemplate: React.FC<GenericTemplateProps> = ({
                 <Brightness4Icon />
               </IconButton>
             )}
+            <IconButton color="inherit">
+              <Badge badgeContent={4} color="secondary">
+                <NotificationsIcon />
+              </Badge>
+            </IconButton>
           </Toolbar>
         </AppBar>
         <Drawer variant="permanent" open={open}>
