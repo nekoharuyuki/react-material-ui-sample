@@ -1,19 +1,28 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React, { Suspense } from 'react'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 
-import ProductPage from "./components/pages/ProductPage";
-import HomePage from "./components/pages/HomePage";
-import SignInPage from "./components/pages/SignInPage";
+// Containers
+const DefaultLayout = React.lazy(() => import('./components/pages/dashboard/Dashboard'))
+
+// Pages
+const Login = React.lazy(() => import('./components/pages/sign-in/SignIn'))
+
+const loading = (
+  <div className="pt-3 text-center">
+    <div className="sk-spinner sk-spinner-pulse"></div>
+  </div>
+)
 
 const App: React.FC = () => {
   return (
-    <Router>
-      <Switch>
-        <Route path="/products" component={ProductPage} exact />
-        <Route path="/Home" component={HomePage} exact />
-        <Route path="/" component={SignInPage} exact />
-      </Switch>
-    </Router>
+    <HashRouter>
+      <Suspense fallback={loading}>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="*" element={<DefaultLayout />} />
+        </Routes>
+      </Suspense>
+    </HashRouter>
   );
 };
 
