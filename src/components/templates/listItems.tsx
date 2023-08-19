@@ -3,70 +3,80 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import ListSubheader from '@mui/material/ListSubheader';
+import HomeIcon from '@mui/icons-material/Home';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import PeopleIcon from '@mui/icons-material/People';
 import BarChartIcon from '@mui/icons-material/BarChart';
-import LayersIcon from '@mui/icons-material/Layers';
 import AssignmentIcon from '@mui/icons-material/Assignment';
+import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
+import InfoIcon from '@mui/icons-material/Info';
+import SettingsIcon from '@mui/icons-material/Settings';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 export const mainListItems = (
   <React.Fragment>
     <ListItemButton>
       <ListItemIcon>
+        <HomeIcon />
+      </ListItemIcon>
+      <ListItemText primary="管理画面トップ" />
+    </ListItemButton>
+    <ListItemButton>
+      <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
-      <ListItemText primary="Dashboard" />
-    </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
-        <ShoppingCartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Orders" />
-    </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
-        <PeopleIcon />
-      </ListItemIcon>
-      <ListItemText primary="Customers" />
+      <ListItemText primary="ダッシュボード" />
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
         <BarChartIcon />
       </ListItemIcon>
-      <ListItemText primary="Reports" />
+      <ListItemText primary="分析" />
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
-        <LayersIcon />
+        <AssignmentIcon />
       </ListItemIcon>
-      <ListItemText primary="Integrations" />
+      <ListItemText primary="リスト" />
     </ListItemButton>
   </React.Fragment>
 );
 
 export const secondaryListItems = (
   <React.Fragment>
-    <ListSubheader component="div" inset>
-      Saved reports
+    <ListSubheader component="div" inset disableSticky>
+      オプション機能
     </ListSubheader>
     <ListItemButton>
       <ListItemIcon>
-        <AssignmentIcon />
+        <AccountCircleIcon />
       </ListItemIcon>
-      <ListItemText primary="Current month" />
+      <ListItemText primary="アカウント情報" />
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
-        <AssignmentIcon />
+        <SettingsIcon />
       </ListItemIcon>
-      <ListItemText primary="Last quarter" />
+      <ListItemText primary="設定" />
+    </ListItemButton>
+  </React.Fragment>
+);
+
+export const tertiaryListItems = (
+  <React.Fragment>
+    <ListSubheader component="div" inset>
+      管理者設定
+    </ListSubheader>
+    <ListItemButton>
+      <ListItemIcon>
+        <AdminPanelSettingsIcon />
+      </ListItemIcon>
+      <ListItemText primary="アカウント管理" />
     </ListItemButton>
     <ListItemButton>
       <ListItemIcon>
-        <AssignmentIcon />
+        <InfoIcon />
       </ListItemIcon>
-      <ListItemText primary="Year-end sale" />
+      <ListItemText primary="お知らせ設定" />
     </ListItemButton>
   </React.Fragment>
 );

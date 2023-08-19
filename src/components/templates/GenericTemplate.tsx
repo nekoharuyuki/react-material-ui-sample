@@ -14,13 +14,9 @@ import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import IconButton from "@mui/material/IconButton";
-import HomeIcon from "@mui/icons-material/Home";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
-import ListItem from "@mui/material/ListItem";
-import ListItemIcon from "@mui/material/ListItemIcon";
-import ListItemText from "@mui/material/ListItemText";
+import { mainListItems, secondaryListItems, tertiaryListItems } from './listItems';
 
 const drawerWidth = 240;
 
@@ -61,6 +57,7 @@ const AppBar = styled(MuiAppBar, {
     }),
   }),
 }));
+
 const Copyright = () => {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -193,22 +190,11 @@ const GenericTemplate: React.FC<GenericTemplateProps> = ({
           </Toolbar>
           <Divider />
           <List component="nav">
-            <Link to="/Home">
-              <ListItem>
-                <ListItemIcon>
-                  <HomeIcon />
-                </ListItemIcon>
-                <ListItemText primary="トップページ" />
-              </ListItem>
-            </Link>
-            <Link to="/products">
-              <ListItem>
-                <ListItemIcon>
-                  <ShoppingCartIcon />
-                </ListItemIcon>
-                <ListItemText primary="商品ページ" />
-              </ListItem>
-            </Link>
+            {mainListItems}
+            <Divider sx={{ my: 1 }} />
+            {secondaryListItems}
+            <Divider sx={{ my: 1 }} />
+            {tertiaryListItems}
           </List>
         </Drawer>
         <Box

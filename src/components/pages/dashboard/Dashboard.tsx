@@ -17,7 +17,7 @@ import Link from '@mui/material/Link';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import { mainListItems, secondaryListItems } from './listItems';
+import { mainListItems, secondaryListItems, tertiaryListItems } from '../../templates/listItems';
 import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
@@ -123,7 +123,7 @@ export default function Dashboard() {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Dashboard
+              管理画面
             </Typography>
             <IconButton color="inherit">
               <Badge badgeContent={4} color="secondary">
@@ -150,6 +150,8 @@ export default function Dashboard() {
             {mainListItems}
             <Divider sx={{ my: 1 }} />
             {secondaryListItems}
+            <Divider sx={{ my: 1 }} />
+            {tertiaryListItems}
           </List>
         </Drawer>
         <Box
