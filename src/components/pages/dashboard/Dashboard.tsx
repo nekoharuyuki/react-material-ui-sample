@@ -1,5 +1,3 @@
-import * as React from 'react';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -10,9 +8,6 @@ import GenericTemplate from '../../templates/GenericTemplate';
 import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
-
-// TODO remove, this demo shouldn't need to reset the theme.
-const defaultTheme = createTheme();
 
 export default function Dashboard() {
   return (
