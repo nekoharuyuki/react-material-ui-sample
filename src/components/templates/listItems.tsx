@@ -11,33 +11,42 @@ import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 import InfoIcon from '@mui/icons-material/Info';
 import SettingsIcon from '@mui/icons-material/Settings';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import Link from '@mui/material/Link';
 
 export const mainListItems = (
   <React.Fragment>
-    <ListItemButton>
-      <ListItemIcon>
-        <HomeIcon />
-      </ListItemIcon>
-      <ListItemText primary="管理画面トップ" />
-    </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
-        <DashboardIcon />
-      </ListItemIcon>
-      <ListItemText primary="ダッシュボード" />
-    </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
-        <BarChartIcon />
-      </ListItemIcon>
-      <ListItemText primary="分析" />
-    </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
-        <AssignmentIcon />
-      </ListItemIcon>
-      <ListItemText primary="リスト" />
-    </ListItemButton>
+    <Link href="#" color="inherit" underline="none">
+      <ListItemButton>
+        <ListItemIcon>
+          <HomeIcon />
+        </ListItemIcon>
+        <ListItemText primary="管理画面トップ" />
+      </ListItemButton>
+    </Link>
+    <Link href="#" color="inherit" underline="none">
+      <ListItemButton>
+        <ListItemIcon>
+          <DashboardIcon />
+        </ListItemIcon>
+        <ListItemText primary="ダッシュボード" />
+      </ListItemButton>
+    </Link>
+    <Link href="#" color="inherit" underline="none">
+      <ListItemButton>
+        <ListItemIcon>
+          <BarChartIcon />
+        </ListItemIcon>
+        <ListItemText primary="分析" />
+      </ListItemButton>
+    </Link>
+    <Link href="#" color="inherit" underline="none">
+      <ListItemButton>
+        <ListItemIcon>
+          <AssignmentIcon />
+        </ListItemIcon>
+        <ListItemText primary="リスト" />
+      </ListItemButton>
+    </Link>
   </React.Fragment>
 );
 
@@ -46,18 +55,22 @@ export const secondaryListItems = (
     <ListSubheader component="div" inset disableSticky>
       オプション機能
     </ListSubheader>
-    <ListItemButton>
-      <ListItemIcon>
-        <AccountCircleIcon />
-      </ListItemIcon>
-      <ListItemText primary="アカウント情報" />
-    </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
-        <SettingsIcon />
-      </ListItemIcon>
-      <ListItemText primary="設定" />
-    </ListItemButton>
+    <Link href="#" color="inherit" underline="none">
+      <ListItemButton>
+        <ListItemIcon>
+          <AccountCircleIcon />
+        </ListItemIcon>
+        <ListItemText primary="アカウント情報" />
+      </ListItemButton>
+    </Link>
+    <Link href="#" color="inherit" underline="none">
+      <ListItemButton>
+        <ListItemIcon>
+          <SettingsIcon />
+        </ListItemIcon>
+        <ListItemText primary="設定" />
+      </ListItemButton>
+    </Link>
   </React.Fragment>
 );
 
@@ -66,17 +79,21 @@ export const tertiaryListItems = (
     <ListSubheader component="div" inset>
       管理者設定
     </ListSubheader>
-    <ListItemButton>
-      <ListItemIcon>
-        <AdminPanelSettingsIcon />
-      </ListItemIcon>
-      <ListItemText primary="アカウント管理" />
-    </ListItemButton>
-    <ListItemButton>
-      <ListItemIcon>
-        <InfoIcon />
-      </ListItemIcon>
-      <ListItemText primary="お知らせ設定" />
-    </ListItemButton>
+    <Link href="#" color="inherit" underline="none">
+      <ListItemButton>
+        <ListItemIcon>
+          <AdminPanelSettingsIcon />
+        </ListItemIcon>
+        <ListItemText primary="アカウント管理" />
+      </ListItemButton>
+    </Link>
+    <Link href="#" color="inherit" underline="none">
+      <ListItemButton>
+        <ListItemIcon>
+          <InfoIcon />
+        </ListItemIcon>
+        <ListItemText primary="お知らせ設定" />
+      </ListItemButton>
+    </Link>
   </React.Fragment>
 );
