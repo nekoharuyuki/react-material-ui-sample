@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/react-material-ui-sample/static/css/main.e6c13ad2.css",
+    "main.js": "/react-material-ui-sample/static/js/main.bf4c6d9c.js",
+    "static/js/899.f55aaeb5.chunk.js": "/react-material-ui-sample/static/js/899.f55aaeb5.chunk.js",
+    "static/js/945.e803648e.chunk.js": "/react-material-ui-sample/static/js/945.e803648e.chunk.js",
+    "static/js/787.16947b57.chunk.js": "/react-material-ui-sample/static/js/787.16947b57.chunk.js",
+    "static/js/977.eea8a353.chunk.js": "/react-material-ui-sample/static/js/977.eea8a353.chunk.js",
+    "static/js/216.fe676e20.chunk.js": "/react-material-ui-sample/static/js/216.fe676e20.chunk.js",
+    "static/js/212.c3d8aefc.chunk.js": "/react-material-ui-sample/static/js/212.c3d8aefc.chunk.js",
+    "index.html": "/react-material-ui-sample/index.html",
+    "main.e6c13ad2.css.map": "/react-material-ui-sample/static/css/main.e6c13ad2.css.map",
+    "main.bf4c6d9c.js.map": "/react-material-ui-sample/static/js/main.bf4c6d9c.js.map",
+    "899.f55aaeb5.chunk.js.map": "/react-material-ui-sample/static/js/899.f55aaeb5.chunk.js.map",
+    "945.e803648e.chunk.js.map": "/react-material-ui-sample/static/js/945.e803648e.chunk.js.map",
+    "787.16947b57.chunk.js.map": "/react-material-ui-sample/static/js/787.16947b57.chunk.js.map",
+    "977.eea8a353.chunk.js.map": "/react-material-ui-sample/static/js/977.eea8a353.chunk.js.map",
+    "216.fe676e20.chunk.js.map": "/react-material-ui-sample/static/js/216.fe676e20.chunk.js.map",
+    "212.c3d8aefc.chunk.js.map": "/react-material-ui-sample/static/js/212.c3d8aefc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.bf4c6d9c.js"
+  ]
+}
