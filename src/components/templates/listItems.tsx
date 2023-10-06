@@ -15,7 +15,7 @@ import Link from '@mui/material/Link';
 
 export const mainListItems = (
   <React.Fragment>
-    <Link href="#" color="inherit" underline="none">
+    <Link href="/" color="inherit" underline="none">
       <ListItemButton>
         <ListItemIcon>
           <HomeIcon />
@@ -23,7 +23,7 @@ export const mainListItems = (
         <ListItemText primary="管理画面トップ" />
       </ListItemButton>
     </Link>
-    <Link href="#" color="inherit" underline="none">
+    <Link href="/" color="inherit" underline="none">
       <ListItemButton>
         <ListItemIcon>
           <DashboardIcon />
@@ -31,7 +31,7 @@ export const mainListItems = (
         <ListItemText primary="ダッシュボード" />
       </ListItemButton>
     </Link>
-    <Link href="#" color="inherit" underline="none">
+    <Link href="/" color="inherit" underline="none">
       <ListItemButton>
         <ListItemIcon>
           <BarChartIcon />
@@ -39,7 +39,7 @@ export const mainListItems = (
         <ListItemText primary="分析" />
       </ListItemButton>
     </Link>
-    <Link href="#" color="inherit" underline="none">
+    <Link href="/" color="inherit" underline="none">
       <ListItemButton>
         <ListItemIcon>
           <AssignmentIcon />
@@ -55,7 +55,7 @@ export const secondaryListItems = (
     <ListSubheader component="div" inset disableSticky>
       オプション機能
     </ListSubheader>
-    <Link href="#" color="inherit" underline="none">
+    <Link href="/" color="inherit" underline="none">
       <ListItemButton>
         <ListItemIcon>
           <AccountCircleIcon />
@@ -63,7 +63,7 @@ export const secondaryListItems = (
         <ListItemText primary="アカウント情報" />
       </ListItemButton>
     </Link>
-    <Link href="#" color="inherit" underline="none">
+    <Link href="/" color="inherit" underline="none">
       <ListItemButton>
         <ListItemIcon>
           <SettingsIcon />
@@ -79,7 +79,7 @@ export const tertiaryListItems = (
     <ListSubheader component="div" inset>
       管理者設定
     </ListSubheader>
-    <Link href="#" color="inherit" underline="none">
+    <Link href="/" color="inherit" underline="none">
       <ListItemButton>
         <ListItemIcon>
           <AdminPanelSettingsIcon />
@@ -87,7 +87,7 @@ export const tertiaryListItems = (
         <ListItemText primary="アカウント管理" />
       </ListItemButton>
     </Link>
-    <Link href="#" color="inherit" underline="none">
+    <Link href="/" color="inherit" underline="none">
       <ListItemButton>
         <ListItemIcon>
           <InfoIcon />

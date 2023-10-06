@@ -11,14 +11,14 @@ const loading = (
 const DefaultLayout = React.lazy(() => import('./components/pages/dashboard/Dashboard'))
 
 // Pages
-const Login = React.lazy(() => import('./components/pages/sign-in/SignIn'))
+const SignIn = React.lazy(() => import('./components/pages/sign-in/SignIn'))
 
 const App: React.FC = () => {
   return (
     <HashRouter>
       <Suspense fallback={loading}>
         <Routes>
-          <Route path="/login" element={<Login />} />
+          <Route path="/SignIn" element={<SignIn />} />
           <Route path="*" element={<DefaultLayout />} />
         </Routes>
       </Suspense>
