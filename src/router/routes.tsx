@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 import { Layout } from "../layout/Layout";
 
+// サンプルページ
 import { TopPage } from "../pages/sample/TopPage";
 import { ImageListPage } from "../pages/sample/ImageListPage";
 import { ImageNewPage } from "../pages/sample/ImageNewPage";

@@ -1,10 +1,8 @@
 import { FC } from "react";
-import GenericTemplate from '../../components/templates/GenericTemplate';
+import Title from '../../components/templates/Title';
 
 export const TopPage: FC = () => {
-  return(
-    <GenericTemplate title={'トップ'}>
-
-    </GenericTemplate>
+  return (
+    <Title>管理画面トップ</Title>
   );
 };

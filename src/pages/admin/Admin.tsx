@@ -3,12 +3,10 @@ import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
-import GenericTemplate from '../../components/templates/GenericTemplate';
 import Accounts from './Account';
 
 export default function Admin() {
   return (
-    <GenericTemplate title={'アカウント管理'}>
       <Box sx={{ display: 'flex' }}>
         <Toolbar />
         <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
@@ -19,6 +17,5 @@ export default function Admin() {
           </Grid>
         </Container>
       </Box>
-    </GenericTemplate>
   );
 }

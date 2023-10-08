@@ -3,14 +3,12 @@ import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
-import GenericTemplate from '../../components/templates/GenericTemplate';
 import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
 
 export default function Dashboard() {
   return (
-    <GenericTemplate title={'ダッシュボード'}>
       <Box sx={{ display: 'flex' }}>
         <Toolbar />
         <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
@@ -50,6 +48,5 @@ export default function Dashboard() {
           </Grid>
         </Container>
       </Box>
-    </GenericTemplate>
   );
 }

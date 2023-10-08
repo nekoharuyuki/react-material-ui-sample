@@ -16,7 +16,7 @@ const createNavigationGroupItem = (item: NavigationGroupItem) => item;
 export const NAVIGATION_ITEMS: NavigationItem[] = [
   createNavigationSingleItem({
     icon: HomeIcon,
-    title: "トップ",
+    title: "管理画面トップ",
     href: "/"
   }),
   createNavigationGroupItem({
