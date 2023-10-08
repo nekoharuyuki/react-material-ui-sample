@@ -5,7 +5,7 @@ import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import Title from '../../templates/Title';
+import Title from '../../components/templates/Title';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import Avatar from '@mui/material/Avatar';
 import StyledBadge from '@mui/material/Badge';

@@ -3,7 +3,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
-import GenericTemplate from '../../templates/GenericTemplate';
+import GenericTemplate from '../../components/templates/GenericTemplate';
 import Accounts from './Account';
 
 export default function Admin() {
