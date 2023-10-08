@@ -14,6 +14,20 @@ import { Menu as MenuIcon } from "@mui/icons-material";
 
 import { NavigationDrawer } from "../components/NavigationDrawer";
 import { AppNavigationList } from "../components/AppNavigationList/AppNavigationList";
+import { Link } from "react-router-dom";
+
+const Copyright = () => {
+  return (
+    <Typography variant="body2" color="textSecondary" align="center">
+      {'Copyright © '}
+      <Link color="inherit" to="https://nekoharuyuki.github.io/Privacy.Policy.io/">
+        Neko Haruyuki
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
+};
 
 const Toolbar = styled(MuiToolbar)(({ theme }) => ({
   padding: theme.spacing(0, 2.5),
@@ -86,7 +100,7 @@ export const Layout: FC = () => {
             backgroundColor: "#eee"
           }}
         >
-          フッター
+          <Copyright />
         </Box>
       </Box>
     </Box>

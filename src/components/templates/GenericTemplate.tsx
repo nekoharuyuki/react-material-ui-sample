@@ -10,7 +10,6 @@ import List from "@mui/material/List";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import Container from "@mui/material/Container";
-import { Link } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import IconButton from "@mui/material/IconButton";
@@ -59,19 +58,6 @@ const AppBar = styled(MuiAppBar, {
     }),
   }),
 }));
-
-const Copyright = () => {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" to="https://nekoharuyuki.github.io/Privacy.Policy.io/">
-        Neko Haruyuki
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-};
 
 const Drawer = styled(MuiDrawer, {
   shouldForwardProp: (prop) => prop !== "open",
@@ -222,9 +208,6 @@ const GenericTemplate: React.FC<GenericTemplateProps> = ({
               {title}
             </Typography>
             {children}
-            <Box pt={4}>
-              <Copyright />
-            </Box>
           </Container>
         </Box>
       </Box>
