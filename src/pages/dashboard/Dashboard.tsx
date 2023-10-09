@@ -1,3 +1,4 @@
+import { FC } from "react";
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
@@ -6,12 +7,14 @@ import Paper from '@mui/material/Paper';
 import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
+import Title from '../../components/templates/Title';
 
-export default function Dashboard() {
+export const Dashboard: FC = () => {
   return (
       <Box sx={{ display: 'flex' }}>
         <Toolbar />
         <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+        <Title>ダッシュボード</Title>
           <Grid container spacing={3}>
             {/* Chart */}
             <Grid item xs={12} md={8} lg={9}>

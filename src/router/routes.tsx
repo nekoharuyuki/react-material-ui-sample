@@ -13,6 +13,9 @@ import { SettingPasswordPage } from "../pages/sample/SettingPasswordPage";
 import { SettingNotificationDesktopPage } from "../pages/sample/SettingNotificationDesktopPage";
 import { SettingNotificationEmailPage } from "../pages/sample/SettingNotificationEmailPage";
 
+import { Dashboard } from "../pages/dashboard/Dashboard";
+import { Admin } from "../pages/admin/Admin";
+
 export const AppRoutes: FC = () => {
   return (
     <Routes>
@@ -31,6 +34,9 @@ export const AppRoutes: FC = () => {
           path="/settings/notification-email"
           element={<SettingNotificationEmailPage />}
         />
+
+        <Route path="/Dashboard" element={<Dashboard />} />
+        <Route path="/Admin" element={<Admin />} />
       </Route>
     </Routes>
   );
