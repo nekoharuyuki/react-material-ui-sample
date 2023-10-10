@@ -1,12 +1,21 @@
 {
   "files": {
-    "main.js": "/react-material-ui-sample/static/js/main.e2e5c6c5.js",
+    "main.css": "/react-material-ui-sample/static/css/main.073c9b0a.css",
+    "main.js": "/react-material-ui-sample/static/js/main.5b50ac9d.js",
     "static/js/787.16947b57.chunk.js": "/react-material-ui-sample/static/js/787.16947b57.chunk.js",
+    "static/media/1.jpg": "/react-material-ui-sample/static/media/1.34eedf58c0876517e858.jpg",
+    "static/media/4.jpg": "/react-material-ui-sample/static/media/4.3ddf28ab435770c6d69f.jpg",
+    "static/media/3.jpg": "/react-material-ui-sample/static/media/3.07e357f51e1b86d9e741.jpg",
+    "static/media/2.jpg": "/react-material-ui-sample/static/media/2.0c06e43dc16bee6cdfed.jpg",
+    "static/media/5.jpg": "/react-material-ui-sample/static/media/5.3e55ee5f667d94054da3.jpg",
+    "static/media/6.jpg": "/react-material-ui-sample/static/media/6.edefb235566ed72a7429.jpg",
     "index.html": "/react-material-ui-sample/index.html",
-    "main.e2e5c6c5.js.map": "/react-material-ui-sample/static/js/main.e2e5c6c5.js.map",
+    "main.073c9b0a.css.map": "/react-material-ui-sample/static/css/main.073c9b0a.css.map",
+    "main.5b50ac9d.js.map": "/react-material-ui-sample/static/js/main.5b50ac9d.js.map",
     "787.16947b57.chunk.js.map": "/react-material-ui-sample/static/js/787.16947b57.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.e2e5c6c5.js"
+    "static/css/main.073c9b0a.css",
+    "static/js/main.5b50ac9d.js"
   ]
 }
