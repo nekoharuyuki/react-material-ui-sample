@@ -1,7 +1,12 @@
 import {
   Home as HomeIcon,
+  Dashboard as DashboardIcon,
+  AccountCircle as AccountCircleIcon,
+  Assignment as AssignmentIcon,
   Photo as PhotoIcon,
-  Settings as SettingsIcon
+  BarChart as BarChartIcon,
+  Settings as SettingsIcon,
+  AdminPanelSettings as AdminPanelSettingsIcon
 } from "@mui/icons-material";
 
 import {
@@ -19,17 +24,97 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
     title: "管理画面トップ",
     href: "/"
   }),
+  createNavigationSingleItem({
+    icon: DashboardIcon,
+    title: "ダッシュボード",
+    href: "/Dashboard"
+  }),
+  createNavigationGroupItem({
+    icon: AccountCircleIcon,
+    title: "ユーザー情報",
+    subs: [
+      createNavigationSingleItem({
+        title: "ユーザー情報 一覧",
+        href: "/images/new"
+      }),
+      createNavigationSingleItem({
+        title: "ゲーム内通貨設定",
+        href: "/images"
+      }),
+      createNavigationSingleItem({
+        title: "お知らせ・ギフト設定",
+        href: "/images"
+      })
+    ]
+  }),
+  createNavigationGroupItem({
+    icon: AssignmentIcon,
+    title: "マスタデータ",
+    subs: [
+      createNavigationSingleItem({
+        title: "クエスト",
+        href: "/images/new"
+      }),
+      createNavigationSingleItem({
+        title: "ショップ",
+        href: "/images/new"
+      }),
+      createNavigationSingleItem({
+        title: "ガチャ",
+        href: "/images/new"
+      }),
+      createNavigationSingleItem({
+        title: "キャラクター",
+        href: "/images/new"
+      }),
+      createNavigationSingleItem({
+        title: "アイテム",
+        href: "/images/new"
+      })
+    ]
+  }),
   createNavigationGroupItem({
     icon: PhotoIcon,
-    title: "画像",
+    title: "画像データ",
     subs: [
       createNavigationSingleItem({
         title: "新規作成",
         href: "/images/new"
       }),
       createNavigationSingleItem({
-        title: "一覧",
+        title: "画像一覧",
         href: "/images"
+      })
+    ]
+  }),
+  createNavigationGroupItem({
+    icon: BarChartIcon,
+    title: "データ分析",
+    subs: [
+      createNavigationSingleItem({
+        title: "ユーザー分析",
+        href: "/images/new"
+      }),
+      createNavigationSingleItem({
+        title: "課金分析",
+        href: "/images"
+      }),
+      createNavigationGroupItem({
+        title: "コンテンツ分析",
+        subs: [
+          createNavigationSingleItem({
+            title: "チュートリアル",
+            href: "/settings/notification-desktop"
+          }),
+          createNavigationSingleItem({
+            title: "クエスト",
+            href: "/settings/notification-email"
+          }),
+          createNavigationSingleItem({
+            title: "キャラクター",
+            href: "/settings/notification-desktop"
+          }),
+        ]
       })
     ]
   }),
@@ -66,6 +151,20 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
             href: "/settings/notification-email"
           })
         ]
+      }),
+    ]
+  }),
+  createNavigationGroupItem({
+    icon: AdminPanelSettingsIcon,
+    title: "管理者設定",
+    subs: [
+      createNavigationSingleItem({
+        title: "アカウント管理",
+        href: "/Admin"
+      }),
+      createNavigationSingleItem({
+        title: "お知らせ設定",
+        href: "/images"
       })
     ]
   })

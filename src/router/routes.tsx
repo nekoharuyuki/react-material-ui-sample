@@ -4,7 +4,6 @@ import { Routes, Route } from "react-router-dom";
 import { Layout } from "../layout/Layout";
 
 // サンプルページ
-import { TopPage } from "../pages/sample/TopPage";
 import { ImageListPage } from "../pages/sample/ImageListPage";
 import { ImageNewPage } from "../pages/sample/ImageNewPage";
 import { SettingPlanPage } from "../pages/sample/SettingPlanPage";
@@ -13,6 +12,7 @@ import { SettingPasswordPage } from "../pages/sample/SettingPasswordPage";
 import { SettingNotificationDesktopPage } from "../pages/sample/SettingNotificationDesktopPage";
 import { SettingNotificationEmailPage } from "../pages/sample/SettingNotificationEmailPage";
 
+import { TopPage } from "../pages/top/TopPage";
 import { Dashboard } from "../pages/dashboard/Dashboard";
 import { Admin } from "../pages/admin/Admin";
 

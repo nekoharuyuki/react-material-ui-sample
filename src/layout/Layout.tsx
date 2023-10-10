@@ -19,7 +19,7 @@ import { Link } from "react-router-dom";
 const Copyright = () => {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
+      {'Copyright '}
       <Link color="inherit" to="https://nekoharuyuki.github.io/Privacy.Policy.io/">
         Neko Haruyuki
       </Link>{' '}
