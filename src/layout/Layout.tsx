@@ -11,7 +11,6 @@ import {
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { Menu as MenuIcon } from "@mui/icons-material";
-
 import { NavigationDrawer } from "../components/NavigationDrawer";
 import { AppNavigationList } from "../components/AppNavigationList/AppNavigationList";
 import { Link } from "react-router-dom";
@@ -72,7 +71,13 @@ export const Layout: FC = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography>管理画面</Typography>
+          <Typography
+              component="h1"
+              variant="h6"
+              color="inherit"
+              noWrap
+            >管理画面
+          </Typography>
         </Toolbar>
       </AppBar>
       {/* NavigationDrawer */}

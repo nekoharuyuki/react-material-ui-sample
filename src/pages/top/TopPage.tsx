@@ -4,6 +4,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Title from '../../components/templates/Title';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
+import { Link } from "react-router-dom";
 
 export const TopPage: FC = () => {
   return (
@@ -35,9 +36,9 @@ export const TopPage: FC = () => {
             <Title>ダッシュボード</Title>
             ダッシュボードは、BI（ビジネスインテリジェンス）ツールの一つで、サービスに蓄積された大量のデジタルデータを収集し、分析し、集計値や表、グラフなど分かりやすい形で可視化を実現します。
             <ul>
-              <li>ユーザー分析</li>
-              <li>課金分析</li>
-              <li>コンテンツ分析</li>
+              <li><Link to="/Dashboard">ユーザー分析</Link> : ビジネスやサービスの改善、効果的なマーケティングの策定、ユーザーエンゲージメント向上などの目的に使用されます。</li>
+              <li><Link to="/Dashboard">課金分析</Link> : 収益モデルを最適化し、収益を最大化するための洞察を提供します。</li>
+              <li><Link to="/Dashboard">コンテンツ分析</Link> : コンテンツ戦略の改善、ユーザーエンゲージメントの向上、コンバージョン率の向上などの目的に使用されます。</li>
             </ul>
           </Paper>
         </Grid>
