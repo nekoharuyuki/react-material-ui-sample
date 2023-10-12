@@ -1,8 +1,9 @@
 import './App.css';
 import React, { Suspense } from 'react'
 import { HashRouter } from 'react-router-dom'
-
 import { AppRoutes } from "./router/routes";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { ColorModeContext, useMode } from "./theme";
 
 const loading = (
   <div className="pt-3 text-center">
@@ -11,10 +12,17 @@ const loading = (
 )
 
 const App: React.FC = () => {
+  const [theme, colorMode] = useMode();
+
   return (
     <HashRouter>
       <Suspense fallback={loading}>
-      <AppRoutes />
+        <ColorModeContext.Provider value={colorMode}>
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <AppRoutes />
+          </ThemeProvider>
+        </ColorModeContext.Provider>
       </Suspense>
     </HashRouter>
   );
