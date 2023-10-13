@@ -14,10 +14,11 @@ import { Menu as MenuIcon } from "@mui/icons-material";
 import { NavigationDrawer } from "../components/NavigationDrawer";
 import { AppNavigationList } from "../components/AppNavigationList/AppNavigationList";
 import { Link } from "react-router-dom";
+import Topbar from "../components/templates/Topbar";
 
 const Copyright = () => {
   return (
-    <Typography variant="body2" color="textSecondary" align="center">
+    <Typography variant="body2" color="#3d3d3d" align="center">
       {'Copyright '}
       <Link color="inherit" to="https://nekoharuyuki.github.io/Privacy.Policy.io/">
         Neko Haruyuki
@@ -78,6 +79,15 @@ export const Layout: FC = () => {
               noWrap
             >管理画面
           </Typography>
+          <Box
+          sx={{
+            width: 1300,
+            display: "flex",
+            justifyContent: "flex-end",
+          }}
+          >
+            <Topbar />
+          </Box>
         </Toolbar>
       </AppBar>
       {/* NavigationDrawer */}

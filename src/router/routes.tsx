@@ -15,29 +15,35 @@ import { SettingNotificationEmailPage } from "../pages/sample/SettingNotificatio
 import { TopPage } from "../pages/top/TopPage";
 import { Dashboard } from "../pages/dashboard/Dashboard";
 import { Admin } from "../pages/admin/Admin";
+import { SignUp } from "../pages/admin/signup/SignUp";
 
 export const AppRoutes: FC = () => {
   return (
-    <Routes>
-      <Route element={<Layout />}>
-        <Route path="/" element={<TopPage />} />
-        <Route path="/images" element={<ImageListPage />} />
-        <Route path="/images/new" element={<ImageNewPage />} />
-        <Route path="/settings/plan" element={<SettingPlanPage />} />
-        <Route path="/settings/email" element={<SettingEmailPage />} />
-        <Route path="/settings/password" element={<SettingPasswordPage />} />
-        <Route
-          path="/settings/notification-desktop"
-          element={<SettingNotificationDesktopPage />}
-        />
-        <Route
-          path="/settings/notification-email"
-          element={<SettingNotificationEmailPage />}
-        />
+    <div className="app">
+      <main className="content">
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/images" element={<ImageListPage />} />
+            <Route path="/images/new" element={<ImageNewPage />} />
+            <Route path="/settings/plan" element={<SettingPlanPage />} />
+            <Route path="/settings/email" element={<SettingEmailPage />} />
+            <Route path="/settings/password" element={<SettingPasswordPage />} />
+            <Route
+              path="/settings/notification-desktop"
+              element={<SettingNotificationDesktopPage />}
+            />
+            <Route
+              path="/settings/notification-email"
+              element={<SettingNotificationEmailPage />}
+            />
 
-        <Route path="/Dashboard" element={<Dashboard />} />
-        <Route path="/Admin" element={<Admin />} />
-      </Route>
-    </Routes>
+            <Route path="/" element={<TopPage />} />
+            <Route path="/SignUp" element={<SignUp />} />
+            <Route path="/Dashboard" element={<Dashboard />} />
+            <Route path="/Admin" element={<Admin />} />
+          </Route>
+        </Routes>
+      </main>
+    </div>
   );
 };

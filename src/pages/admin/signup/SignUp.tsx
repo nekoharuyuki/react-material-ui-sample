@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import { FC } from "react";
+import { useState } from "react";
 import { auth } from "../../../lib/firebase/firebase";
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 
-const SignUp: React.FC = () => {
+export const SignUp: FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   console.log(email, password);
@@ -59,5 +60,3 @@ const SignUp: React.FC = () => {
     
   );
 };
-
-export default SignUp;

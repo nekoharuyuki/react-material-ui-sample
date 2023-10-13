@@ -22,7 +22,7 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
   createNavigationSingleItem({
     icon: HomeIcon,
     title: "管理画面トップ",
-    href: "/"
+    href: "/Top"
   }),
   createNavigationSingleItem({
     icon: DashboardIcon,
@@ -164,7 +164,7 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
       }),
       createNavigationSingleItem({
         title: "お知らせ設定",
-        href: "/images"
+        href: "/SignUp"
       })
     ]
   })
