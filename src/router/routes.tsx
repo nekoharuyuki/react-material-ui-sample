@@ -15,7 +15,6 @@ import { SettingNotificationEmailPage } from "../pages/sample/SettingNotificatio
 import { TopPage } from "../pages/top/TopPage";
 import { Dashboard } from "../pages/dashboard/Dashboard";
 import { Admin } from "../pages/admin/Admin";
-import { SignUp } from "../pages/admin/signup/SignUp";
 
 export const AppRoutes: FC = () => {
   return (
@@ -38,7 +37,6 @@ export const AppRoutes: FC = () => {
             />
 
             <Route path="/" element={<TopPage />} />
-            <Route path="/SignUp" element={<SignUp />} />
             <Route path="/Dashboard" element={<Dashboard />} />
             <Route path="/Admin" element={<Admin />} />
           </Route>
