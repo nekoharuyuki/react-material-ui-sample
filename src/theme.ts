@@ -9,7 +9,7 @@ type ColorTokens = {
 };
 
 // カラーデザイントークンを生成
-export const tokens = (mode: "dark" | "light"): ColorTokens => {
+export const tokens = (): ColorTokens => {
   // カラーデザイントークンの定義
   const designTokens: ColorTokens = {
     grey: {
@@ -122,7 +122,7 @@ type ThemeSettings = {
 
 // テーマ設定を生成
 const themeSettings = (mode: "dark" | "light"): ThemeSettings => {
-  const colors = tokens(mode);
+  const colors = tokens();
   return {
     palette: {
       mode: mode,
