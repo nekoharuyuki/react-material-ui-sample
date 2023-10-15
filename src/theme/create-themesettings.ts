@@ -1,85 +1,20 @@
-import { createContext, useState, useMemo } from "react";
-import { createTheme, Theme } from "@mui/material/styles";
-
-// カラーデザイントークンの型
-type ColorTokens = {
-  [key: string]: {
-    [key: number]: string;
-  };
-};
-
-// カラーデザイントークンを生成
-export const tokens = (): ColorTokens => {
-  // カラーデザイントークンの定義
-  const designTokens: ColorTokens = {
-    grey: {
-      100: "#e0e0e0",
-      200: "#c2c2c2",
-      300: "#a3a3a3",
-      400: "#858585",
-      500: "#666666",
-      600: "#525252",
-      700: "#3d3d3d",
-      800: "#292929",
-      900: "#141414",
-    },
-    primary: {
-      100: "#d0d1d5",
-      200: "#a1a4ab",
-      300: "#727681",
-      400: "#1F2A40",
-      500: "#141b2d",
-      600: "#101624",
-      700: "#0c101b",
-      800: "#080b12",
-      900: "#040509",
-    },
-    greenAccent: {
-      100: "#dbf5ee",
-      200: "#b7ebde",
-      300: "#94e2cd",
-      400: "#70d8bd",
-      500: "#4cceac",
-      600: "#3da58a",
-      700: "#2e7c67",
-      800: "#1e5245",
-      900: "#0f2922",
-    },
-    redAccent: {
-      100: "#f8dcdb",
-      200: "#f1b9b7",
-      300: "#e99592",
-      400: "#e2726e",
-      500: "#db4f4a",
-      600: "#af3f3b",
-      700: "#832f2c",
-      800: "#58201e",
-      900: "#2c100f",
-    },
-    blueAccent: {
-      100: "#e1e2fe",
-      200: "#c3c6fd",
-      300: "#a4a9fc",
-      400: "#868dfb",
-      500: "#6870fa",
-      600: "#535ac8",
-      700: "#3e4396",
-      800: "#2a2d64",
-      900: "#151632",
-    },
-  };
-  return designTokens;
-};
+import { tokens } from "./theme";
 
 // テーマ設定の型
 type ThemeSettings = {
   palette: {
     mode: "dark" | "light";
     primary: {
+      light: string;
       main: string;
+      dark: string;
+      contrastText: string;
     };
     secondary: {
+      dark: string;
       main: string;
+      light: string;
+      contrastText: string;
     };
     neutral: {
       dark: string;
@@ -121,7 +56,7 @@ type ThemeSettings = {
 };
 
 // テーマ設定を生成
-const themeSettings = (mode: "dark" | "light"): ThemeSettings => {
+export const themeSettings = (mode: "dark" | "light"): ThemeSettings => {
   const colors = tokens();
   return {
     palette: {
@@ -130,9 +65,15 @@ const themeSettings = (mode: "dark" | "light"): ThemeSettings => {
         ? {
             primary: {
               main: colors.primary[500],
+              light: '#7383A2',
+              dark: '#002f6c',
+              contrastText: colors.primary[100],
             },
             secondary: {
               main: colors.greenAccent[300],
+              light: '#FF6428',
+              dark: '#c41c00',
+              contrastText: '#FFF',
             },
             neutral: {
               dark: colors.grey[700],
@@ -146,9 +87,15 @@ const themeSettings = (mode: "dark" | "light"): ThemeSettings => {
         : {
             primary: {
               main: colors.primary[100],
+              light: '#7383A2',
+              dark: '#002f6c',
+              contrastText: colors.primary[500],
             },
             secondary: {
               main: colors.greenAccent[700],
+              light: '#FF6428',
+              dark: '#c41c00',
+              contrastText: '#FFF',
             },
             neutral: {
               dark: colors.grey[700],
@@ -189,26 +136,4 @@ const themeSettings = (mode: "dark" | "light"): ThemeSettings => {
       },
     },
   };
-};
-
-// カラーモード切り替えのためのコンテキスト
-export const ColorModeContext = createContext({
-  toggleColorMode: () => {},
-});
-
-// カラーモードを切り替えるためのフック
-export const useMode = (): [Theme, { toggleColorMode: () => void }] => {
-  const [mode, setMode] = useState<"dark" | "light">("dark");
-
-  const colorMode = useMemo(
-    () => ({
-      toggleColorMode: () =>
-        setMode((prev) => (prev === "light" ? "dark" : "light")),
-    }),
-    []
-  );
-
-  const theme = useMemo(() => createTheme(themeSettings(mode)) as Theme, [mode]);
-
-  return [theme, colorMode];
 };

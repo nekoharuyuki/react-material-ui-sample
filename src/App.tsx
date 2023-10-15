@@ -3,7 +3,7 @@ import React, { Suspense } from 'react'
 import { HashRouter } from 'react-router-dom'
 import { AppRoutes } from "./router/routes";
 import { CssBaseline, ThemeProvider } from "@mui/material";
-import { ColorModeContext, useMode } from "./theme";
+import { ColorModeContext, useMode } from "./theme/theme";
 
 const loading = (
   <div className="pt-3 text-center">
