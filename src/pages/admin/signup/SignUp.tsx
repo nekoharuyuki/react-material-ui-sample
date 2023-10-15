@@ -1,9 +1,10 @@
-import { FC } from "react";
 import { useState } from "react";
 import { auth } from "../../../lib/firebase/firebase";
 import { createUserWithEmailAndPassword } from 'firebase/auth'
+import Title from '../../../components/templates/Title';
+import Button from '@mui/material/Button';
 
-export const SignUp: FC = () => {
+export default function SignUp() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   console.log(email, password);
@@ -31,32 +32,31 @@ export const SignUp: FC = () => {
 
   return (
     <div>
-        <h1>ユーザ登録</h1>
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label>メールアドレス</label>
-            <input
-              name="email"
-              type="email"
-              placeholder="email"
-              onChange={(event) => handleChangeEmail(event)}
-            />
-          </div>
-          <div>
-            <label>パスワード</label>
-            <input
-              name="password"
-              type="password"
-              placeholder="password"
-              onChange={(event) => handleChangePassword(event)}
-            />
-          </div>
-          <hr />
-          <div>
-            <button>登録</button>
-          </div>
-        </form>
+      <Title>ユーザ登録</Title>
+      <div>
+        <label>メールアドレス</label>
+        <input
+          name="email"
+          type="email"
+          placeholder="email"
+          onChange={(event) => handleChangeEmail(event)}
+        />
       </div>
-    
+      <div>
+        <label>パスワード</label>
+        <input
+          name="password"
+          type="password"
+          placeholder="password"
+          onChange={(event) => handleChangePassword(event)}
+        />
+      </div>
+        <hr />
+      <div>
+        <Button variant="contained" color="primary" onClick={handleSubmit}>
+          登録
+        </Button>
+      </div>
+    </div>
   );
 };
