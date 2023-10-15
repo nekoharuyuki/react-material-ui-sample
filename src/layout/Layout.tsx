@@ -72,13 +72,6 @@ export const Layout: FC = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-              component="h1"
-              variant="h6"
-              color="inherit"
-              noWrap
-            >管理画面
-          </Typography>
           <Box
           sx={{
             width: 1300,
