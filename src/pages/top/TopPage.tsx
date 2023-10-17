@@ -22,7 +22,10 @@ export const TopPage: FC = () => {
             <Title>管理画面トップ</Title>
             ゲーム開発の開発効率を飛躍的に向上させることを目的に開発された汎用ゲームサーバーです。<br /><br />
             モバイル・Webアプリケーションのプラットフォームである『Firebase』を利用すると、開発や運用の際にバックエンドで動くサービスを作成・管理する手間がなくなります。<br />
-            その分スピーディーに環境整備ができるようになって、サービスの早期リリースが可能です。
+            その分スピーディーに環境整備ができるようになって、サービスの早期リリースが可能です。<br /><br />
+            <Title>お問い合わせ</Title>
+            お問い合わせ、ご要望等がございましたら、お気軽にお問い合わせください。
+            <Link to="https://nekoharuyuki.github.io/Form.io/" color="inherit" >https://nekoharuyuki.github.io/Form.io/</Link>
           </Paper>
         </Grid>
         <Grid item xs={12}>
