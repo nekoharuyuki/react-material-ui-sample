@@ -22,6 +22,7 @@ type ThemeSettings = {
       light: string;
     };
     background: {
+      paper: string;
       default: string;
     };
   };
@@ -72,7 +73,7 @@ export const themeSettings = (mode: "dark" | "light"): ThemeSettings => {
             secondary: {
               main: colors.greenAccent[300],
               light: '#FF6428',
-              dark: '#c41c00',
+              dark: colors.greenAccent[300],
               contrastText: '#FFF',
             },
             neutral: {
@@ -81,7 +82,8 @@ export const themeSettings = (mode: "dark" | "light"): ThemeSettings => {
               light: colors.grey[100],
             },
             background: {
-              default: colors.primary[400],
+              paper: colors.primary[400],
+              default: colors.primary[500],
             },
           }
         : {
@@ -92,7 +94,7 @@ export const themeSettings = (mode: "dark" | "light"): ThemeSettings => {
               contrastText: colors.primary[500],
             },
             secondary: {
-              main: colors.greenAccent[700],
+              main: colors.greenAccent[600],
               light: '#FF6428',
               dark: '#c41c00',
               contrastText: '#FFF',
@@ -103,7 +105,8 @@ export const themeSettings = (mode: "dark" | "light"): ThemeSettings => {
               light: colors.grey[100],
             },
             background: {
-              default: "#fcfcfc",
+              paper: colors.grey[50],
+              default: colors.grey[100],
             },
           }),
     },
