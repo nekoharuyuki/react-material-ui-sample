@@ -15,6 +15,7 @@ import { SettingNotificationEmailPage } from "../pages/sample/SettingNotificatio
 import { TopPage } from "../pages/top/TopPage";
 import { Dashboard } from "../pages/dashboard/Dashboard";
 import { Admin } from "../pages/admin/Admin";
+import { UserManagementPage } from "../pages/user/UserManagementPage";
 
 export const AppRoutes: FC = () => {
   return (
@@ -39,6 +40,7 @@ export const AppRoutes: FC = () => {
             <Route path="/" element={<TopPage />} />
             <Route path="/Dashboard" element={<Dashboard />} />
             <Route path="/Admin" element={<Admin />} />
+            <Route path="/UserManagement" element={<UserManagementPage />} />
           </Route>
         </Routes>
       </main>

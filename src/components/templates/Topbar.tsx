@@ -11,6 +11,7 @@ import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SearchIcon from "@mui/icons-material/Search";
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
+import { Link } from 'react-router-dom';
 
 const Topbar = () => {
   const theme = useTheme();
@@ -48,7 +49,7 @@ const Topbar = () => {
         <IconButton>
           <NotificationsOutlinedIcon />
         </IconButton>
-        <IconButton>
+        <IconButton component={Link} to="/settings/plan">
           <SettingsOutlinedIcon />
         </IconButton>
         <div>
@@ -73,7 +74,7 @@ const Topbar = () => {
             onClose={handleClose}
           >
             <MenuItem onClick={handleClose}>Profile</MenuItem>
-            <MenuItem onClick={handleClose}>My account</MenuItem>
+            <MenuItem onClick={handleClose}>LogOut</MenuItem>
           </Menu>
         </div>
       </Box>

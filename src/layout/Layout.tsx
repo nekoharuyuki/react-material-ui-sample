@@ -37,7 +37,7 @@ const Toolbar = styled(MuiToolbar)(({ theme }) => ({
 }));
 
 export const Layout: FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const isPc = useMediaQuery<Theme>((theme) => theme.breakpoints.up("sm"));
 
   // URLが変わった時に、SPの場合は閉じる

@@ -31,11 +31,11 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
   }),
   createNavigationGroupItem({
     icon: AccountCircleIcon,
-    title: "ユーザー情報",
+    title: "ユーザー管理",
     subs: [
       createNavigationSingleItem({
         title: "ユーザー情報 一覧",
-        href: "/images/new"
+        href: "/UserManagement"
       }),
       createNavigationSingleItem({
         title: "ゲーム内通貨設定",
@@ -49,7 +49,7 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
   }),
   createNavigationGroupItem({
     icon: AssignmentIcon,
-    title: "マスタデータ",
+    title: "マスタ管理",
     subs: [
       createNavigationSingleItem({
         title: "クエスト",
@@ -75,7 +75,7 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
   }),
   createNavigationGroupItem({
     icon: PhotoIcon,
-    title: "画像データ",
+    title: "画像管理",
     subs: [
       createNavigationSingleItem({
         title: "新規作成",
