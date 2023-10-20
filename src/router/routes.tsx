@@ -4,8 +4,8 @@ import { Routes, Route } from "react-router-dom";
 import { Layout } from "../layout/Layout";
 
 // サンプルページ
-import { ImageListPage } from "../pages/sample/ImageListPage";
-import { ImageNewPage } from "../pages/sample/ImageNewPage";
+import { ImageListPage } from "../pages/imagelist/ImageListPage";
+import { ImageNewPage } from "../pages/imagenew/ImageNewPage";
 import { SettingPlanPage } from "../pages/sample/SettingPlanPage";
 import { SettingEmailPage } from "../pages/sample/SettingEmailPage";
 import { SettingPasswordPage } from "../pages/sample/SettingPasswordPage";
