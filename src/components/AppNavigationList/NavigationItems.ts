@@ -53,23 +53,23 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
     subs: [
       createNavigationSingleItem({
         title: "クエスト",
-        href: "/images/new"
+        href: "/UserManagement"
       }),
       createNavigationSingleItem({
         title: "ショップ",
-        href: "/images/new"
+        href: "/UserManagement"
       }),
       createNavigationSingleItem({
         title: "ガチャ",
-        href: "/images/new"
+        href: "/UserManagement"
       }),
       createNavigationSingleItem({
         title: "キャラクター",
-        href: "/images/new"
+        href: "/UserManagement"
       }),
       createNavigationSingleItem({
         title: "アイテム",
-        href: "/images/new"
+        href: "/UserManagement"
       })
     ]
   }),

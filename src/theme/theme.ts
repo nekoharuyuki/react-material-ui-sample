@@ -80,7 +80,7 @@ export const ColorModeContext = createContext({
 
 // カラーモードを切り替えるためのフック
 export const useMode = (): [Theme, { toggleColorMode: () => void }] => {
-  const [mode, setMode] = useState<"dark" | "light">("dark");
+  const [mode, setMode] = useState<"dark" | "light">("light");
 
   const colorMode = useMemo(
     () => ({
