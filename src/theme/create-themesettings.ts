@@ -3,6 +3,7 @@ import { tokens } from "./theme";
 // テーマ設定の型
 type ThemeSettings = {
   palette: {
+    fontFamily: string;
     mode: "dark" | "light";
     primary: {
       light: string;
@@ -31,27 +32,39 @@ type ThemeSettings = {
     fontSize: number;
     h1: {
       fontFamily: string;
+      fontWeight: number;
       fontSize: number;
+      lineHeight: number;
     };
     h2: {
       fontFamily: string;
+      fontWeight: number;
       fontSize: number;
+      lineHeight: number;
     };
     h3: {
       fontFamily: string;
+      fontWeight: number;
       fontSize: number;
+      lineHeight: number;
     };
     h4: {
       fontFamily: string;
+      fontWeight: number;
       fontSize: number;
+      lineHeight: number;
     };
     h5: {
       fontFamily: string;
+      fontWeight: number;
       fontSize: number;
+      lineHeight: number;
     };
     h6: {
       fontFamily: string;
+      fontWeight: number;
       fontSize: number;
+      lineHeight: number;
     };
   };
 };
@@ -61,6 +74,7 @@ export const themeSettings = (mode: "dark" | "light"): ThemeSettings => {
   const colors = tokens();
   return {
     palette: {
+      fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"',
       mode: mode,
       ...(mode === "dark"
         ? {
@@ -115,27 +129,39 @@ export const themeSettings = (mode: "dark" | "light"): ThemeSettings => {
       fontSize: 12,
       h1: {
         fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
+        fontWeight: 700,
         fontSize: 40,
+        lineHeight: 1.2
       },
       h2: {
         fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
+        fontWeight: 700,
         fontSize: 32,
+        lineHeight: 1.2
       },
       h3: {
         fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
+        fontWeight: 700,
         fontSize: 24,
+        lineHeight: 1.2
       },
       h4: {
         fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
+        fontWeight: 700,
         fontSize: 20,
+        lineHeight: 1.2
       },
       h5: {
         fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
+        fontWeight: 700,
         fontSize: 16,
+        lineHeight: 1.2
       },
       h6: {
         fontFamily: ["Source Sans Pro", "sans-serif"].join(","),
+        fontWeight: 700,
         fontSize: 14,
+        lineHeight: 1.2
       },
     },
   };
