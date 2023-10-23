@@ -6,7 +6,7 @@ export const ImageListPage: FC = () => {
     <div>
       画像一覧ページ
       <br />
-      <Link to="/images/new">画像新規作成ページ</Link>
+      <Link to="/images/new">画像アップロード</Link>
     </div>
   );
 };

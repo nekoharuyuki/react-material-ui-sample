@@ -78,7 +78,7 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
     title: "画像管理",
     subs: [
       createNavigationSingleItem({
-        title: "新規作成",
+        title: "画像アップロード",
         href: "/images/new"
       }),
       createNavigationSingleItem({
