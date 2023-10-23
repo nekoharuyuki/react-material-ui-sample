@@ -53,7 +53,7 @@ export default function SignUp() {
       </div>
         <hr />
       <div>
-        <Button variant="contained" color="primary" onClick={handleSubmit}>
+        <Button variant="contained" onClick={handleSubmit}>
           登録
         </Button>
       </div>

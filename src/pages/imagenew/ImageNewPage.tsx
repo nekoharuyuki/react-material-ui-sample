@@ -6,8 +6,24 @@ import { useState } from "react";
 import { Box, LinearProgress, Typography } from "@mui/material";
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
+import { styled } from '@mui/material/styles';
+import Stack from '@mui/material/Stack';
 import { Link } from "react-router-dom";
 import { validateImage } from "image-validator";
+import Button from '@mui/material/Button';
+import CloudUploadIcon from '@mui/icons-material/CloudUpload';
+
+const VisuallyHiddenInput = styled('input')({
+  clip: 'rect(0 0 0 0)',
+  clipPath: 'inset(50%)',
+  height: 1,
+  overflow: 'hidden',
+  position: 'absolute',
+  bottom: 0,
+  left: 0,
+  whiteSpace: 'nowrap',
+  width: 1,
+});
 
 export const ImageNewPage: FC = () => {
   const [imageUrl, setImageUrl] = useState("");
@@ -48,6 +64,7 @@ export const ImageNewPage: FC = () => {
     if (file instanceof Blob) {
       reader.onloadend = async () => {
         setFile(file);
+        setError(`選択したファイル : ${file.name}`);
       };
       reader.readAsDataURL(file);
     } else {
@@ -75,7 +92,7 @@ export const ImageNewPage: FC = () => {
       },
       (error: any) => {
         // エラーハンドリング
-        setError(`アップロードに失敗しました: ${error.message}`);
+        setError(`アップロードに失敗しました : ${error.message}`);
         setProgress(100);
       },
       () => {
@@ -114,8 +131,13 @@ export const ImageNewPage: FC = () => {
           >
             <div>
               <form onSubmit={uploadImage}>
-                <input type="file" onChange={handleImageSelect} />
-                <button type="submit">アップロード</button>
+                <Stack spacing={2} direction="row">
+                  <Button component="label" variant="contained" startIcon={<CloudUploadIcon />}>
+                    Upload file
+                    <VisuallyHiddenInput type="file" onChange={handleImageSelect} />
+                  </Button>
+                  <Button variant="outlined" type="submit">アップロード</Button>
+                </Stack>
               </form>
             </div>
             {progress !== 100 && <LinearProgressWithLabel value={progress} />}
