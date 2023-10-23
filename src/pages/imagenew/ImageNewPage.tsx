@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Title from '../../components/templates/Title';
 import { storage } from "../../lib/firebase/firebase";
-import { ref, uploadBytes } from "firebase/storage";
+import { ref, uploadBytesResumable, UploadTaskSnapshot, getDownloadURL } from "firebase/storage";
 import { useState } from "react";
 import { Box, LinearProgress, Typography } from "@mui/material";
 import Grid from '@mui/material/Grid';
@@ -32,38 +32,64 @@ export const ImageNewPage: FC = () => {
   };
 
   // 画像選択関数
-  const handleImageSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
-    e.preventDefault();
+  const handleImageSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
+    event.preventDefault();
     setError("");
     const reader = new FileReader();
-    const file = e.target.files![0];
+    const file = event.target.files![0];
+    // ファイルが選択されているかどうかを確認
+    if (!file) {
+      return;
+    }
     if (!(validateFile(file))) {
       return;
     }
-    reader.onloadend = async () => {
-      setFile(file);
-    };
-    reader.readAsDataURL(file);
+    // 画像ファイルが 'Blob' タイプのオブジェクトであることを確認する
+    if (file instanceof Blob) {
+      reader.onloadend = async () => {
+        setFile(file);
+      };
+      reader.readAsDataURL(file);
+    } else {
+      // エラーハンドリング: ファイルが 'Blob' でない場合
+      setError("選択したファイルは画像ではありません。");
+    }
   };
 
   // 画像アップロード関数
   const uploadImage = async () => {
     // 参照を作成 → 'images/(画像名)'
+    if (file === null) {
+      setError("ファイルが選択されていません");
+      return;
+    }
     const storageRef = ref(storage, `images/${file.name}`);
-    await uploadBytes(storageRef, file)
-      .then((snapshot) => {
-        setImageUrl(snapshot.ref.fullPath);
-        setError("アップロードに成功しました");
-      })
-      .catch((error) => {
-        setError("アップロードに失敗しました");
+    const uploadTask = uploadBytesResumable(storageRef, file);
+    uploadTask.on(
+      "state_changed",
+      (snapshot: UploadTaskSnapshot) => {
+        // 進行中のsnapshotを得る
+        // アップロードの進行度を表示
+        const percent = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        setProgress(percent);
+      },
+      (error: any) => {
+        // エラーハンドリング
+        setError(`アップロードに失敗しました: ${error.message}`);
         setProgress(100);
-      });
+      },
+      () => {
+        // アップロードが完了したときの処理
+        getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+          setImageUrl(downloadURL);
+        });
+      }
+    );
   };
 
   return (
     <div>
-      <Grid container spacing={3}>
+      <Grid container spacing={1}>
         <Grid item xs={12}>
           <Paper
             sx={{
