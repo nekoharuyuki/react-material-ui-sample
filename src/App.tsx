@@ -2,6 +2,7 @@ import './App.css';
 import React, { Suspense } from 'react'
 import { HashRouter } from 'react-router-dom'
 import { AppRoutes } from "./router/routes";
+import { AuthProvider } from "./lib/firebase/Auth";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme/theme";
 
@@ -17,15 +18,18 @@ const App: React.FC = () => {
   return (
     <HashRouter>
       <Suspense fallback={loading}>
-        <ColorModeContext.Provider value={colorMode}>
-          <ThemeProvider theme={theme}>
-            <CssBaseline />
-            <AppRoutes />
-          </ThemeProvider>
-        </ColorModeContext.Provider>
+        <AuthProvider>
+          <ColorModeContext.Provider value={colorMode}>
+            <ThemeProvider theme={theme}>
+              <CssBaseline />
+              <AppRoutes />
+            </ThemeProvider>
+          </ColorModeContext.Provider>
+        </AuthProvider>
       </Suspense>
     </HashRouter>
   );
 };
+
 
 export default App;

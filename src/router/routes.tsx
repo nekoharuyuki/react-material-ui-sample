@@ -16,6 +16,7 @@ import { TopPage } from "../pages/top/TopPage";
 import { Dashboard } from "../pages/dashboard/Dashboard";
 import { Admin } from "../pages/admin/Admin";
 import { UserManagementPage } from "../pages/user/UserManagementPage";
+import { SignIn } from "../pages/signin/SignIn";
 
 export const AppRoutes: FC = () => {
   return (
@@ -41,6 +42,7 @@ export const AppRoutes: FC = () => {
             <Route path="/Dashboard" element={<Dashboard />} />
             <Route path="/Admin" element={<Admin />} />
             <Route path="/UserManagement" element={<UserManagementPage />} />
+            <Route path="/SignIn" element={<SignIn />} />
           </Route>
         </Routes>
       </main>

@@ -73,8 +73,7 @@ const Topbar = () => {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-            <MenuItem onClick={handleClose}>Profile</MenuItem>
-            <MenuItem onClick={handleClose}>LogOut</MenuItem>
+            <MenuItem onClick={handleClose}>ログアウト</MenuItem>
           </Menu>
         </div>
       </Box>
