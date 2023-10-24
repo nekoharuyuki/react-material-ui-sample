@@ -1,4 +1,4 @@
-import { FC, useState, useEffect, useContext } from "react";
+import { FC, useState, useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import {
   Box,
@@ -15,7 +15,6 @@ import { NavigationDrawer } from "../components/NavigationDrawer";
 import { AppNavigationList } from "../components/AppNavigationList/AppNavigationList";
 import { Link } from "react-router-dom";
 import Topbar from "../components/templates/Topbar";
-import { useAuthContext } from "../lib/firebase/Auth";
 
 const Copyright = () => {
   return (

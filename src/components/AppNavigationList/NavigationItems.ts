@@ -124,7 +124,7 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
     subs: [
       createNavigationSingleItem({
         title: "プラン",
-        href: "/settings/plan"
+        href: "/SettingsPage"
       }),
       createNavigationGroupItem({
         title: "アカウント",
