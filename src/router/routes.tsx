@@ -18,6 +18,7 @@ import { Admin } from "../pages/admin/Admin";
 import { UserManagementPage } from "../pages/user/UserManagementPage";
 import { SignIn } from "../pages/signin/SignIn";
 import { SettingsPage } from "../pages/setting/settings"
+import { AccountPage } from "../pages/setting/account/account"
 
 export const AppRoutes: FC = () => {
   return (
@@ -44,7 +45,8 @@ export const AppRoutes: FC = () => {
             <Route path="/Admin" element={<Admin />} />
             <Route path="/UserManagement" element={<UserManagementPage />} />
             <Route path="/SignIn" element={<SignIn />} />
-            <Route path="/SettingsPage" element={<SettingsPage />} />
+            <Route path="/Settings" element={<SettingsPage />} />
+            <Route path="/Account" element={<AccountPage />} />
           </Route>
         </Routes>
       </main>

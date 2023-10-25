@@ -124,18 +124,18 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
     subs: [
       createNavigationSingleItem({
         title: "プラン",
-        href: "/SettingsPage"
+        href: "/Account"
       }),
       createNavigationGroupItem({
         title: "アカウント",
         subs: [
           createNavigationSingleItem({
             title: "メアド変更",
-            href: "/settings/email"
+            href: "/settings"
           }),
           createNavigationSingleItem({
             title: "パスワード変更",
-            href: "/settings/password"
+            href: "/settings"
           })
         ]
       }),
