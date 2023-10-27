@@ -74,7 +74,7 @@ export const Layout: FC = () => {
           </IconButton>
           <Box
           sx={{
-            width: 1300,
+            width: "100%",
             display: "flex",
             justifyContent: "flex-end",
           }}
