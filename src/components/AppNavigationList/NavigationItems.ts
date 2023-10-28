@@ -43,7 +43,7 @@ export const NAVIGATION_ITEMS: NavigationItem[] = [
       }),
       createNavigationSingleItem({
         title: "お知らせ・ギフト設定",
-        href: "/images"
+        href: "/settings/email"
       })
     ]
   }),
