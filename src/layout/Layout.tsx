@@ -61,6 +61,7 @@ export const Layout: FC = () => {
           // PC表示のpermanentでAppBarよりもzIndexが大きかったので+1して上に上げる
           zIndex: (theme) => (isPc ? theme.zIndex.drawer + 1 : undefined)
         }}
+        color="secondary"
       >
         <Toolbar>
           <IconButton

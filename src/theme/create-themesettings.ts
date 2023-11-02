@@ -85,9 +85,9 @@ export const themeSettings = (mode: "dark" | "light"): ThemeSettings => {
               contrastText: colors.primary[100],
             },
             secondary: {
-              main: colors.greenAccent[300],
+              main: colors.blueAccent[300],
               light: '#FF6428',
-              dark: colors.greenAccent[300],
+              dark: colors.blueAccent[300],
               contrastText: '#FFF',
             },
             neutral: {
@@ -108,7 +108,7 @@ export const themeSettings = (mode: "dark" | "light"): ThemeSettings => {
               contrastText: colors.primary[500],
             },
             secondary: {
-              main: colors.greenAccent[600],
+              main: colors.blueAccent[600],
               light: '#FF6428',
               dark: '#c41c00',
               contrastText: '#FFF',
